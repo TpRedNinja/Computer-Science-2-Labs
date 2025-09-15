@@ -3,4 +3,4 @@ project(Project_1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Project_1 main.cpp)
+add_executable(Project_1 main.cpp Random_Password_Generator.cpp Random_Password_Generator.h)
