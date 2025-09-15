@@ -1,0 +1,3 @@
+C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/generate coin flips/cmake-build-debug/CMakeFiles/generate_coin_flips.dir
+C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/generate coin flips/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/generate coin flips/cmake-build-debug/CMakeFiles/rebuild_cache.dir
