@@ -12,7 +12,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509aa5a9-6618-4d17-9b76-3533fccf54fa" name="Changes" comment="" />
+    <list default="true" id="509aa5a9-6618-4d17-9b76-3533fccf54fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Science 2 Labs/Lab 1/CMSC202_Lab1_HarrisDomangue.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Science 2 Labs/Lab 1/CMSC202_Lab1_HarrisDomangue/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Science 2 Labs/Lab 1/CMSC202_Lab1_HarrisDomangue/Average_Score.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Science 2 Labs/Lab 1/CMSC202_Lab1_HarrisDomangue/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Science 2 Labs/Lab 2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Science 2 Labs/Lab 2/Average_Grade_V2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Science 2 Labs/Lab 2/Average_Grade_V2.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Science 2 Labs/Lab 2/CMakeLists.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +108,7 @@
       <updated>1757958450659</updated>
       <workItem from="1757958451973" duration="1378000" />
       <workItem from="1757961972563" duration="1082000" />
-      <workItem from="1757966577336" duration="593000" />
+      <workItem from="1757966577336" duration="958000" />
     </task>
     <servers />
   </component>
