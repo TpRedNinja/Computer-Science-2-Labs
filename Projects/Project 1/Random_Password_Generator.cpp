@@ -10,6 +10,7 @@ using namespace std;
 
 //declare external variable
 extern int choice;
+extern bool ValidChoice;
 
 string GenPass();
 
@@ -42,27 +43,32 @@ int main_1()
     } while(answer == "no");
     if (answer == "yes")
     {
-        cout << "Press 0 to return to menu list\nEnter 1 to restart\nEnter 4 to exit"<< endl;
-        cout << "Enter your choice: ";
-        cin >> choice;
-        if (choice == 0)
+        do
         {
-            main();
-        } else if (choice == 1)
-        {
-            main_1();
-        } else
-        {
-            cout << "Program Ending";
-        }
-        /*switch (choice)
-        {
-            case 0:
-                main();
-                break;
-            case 2:
-        }*/
+            cout << "Press 0 to return to menu list\nEnter 1 to restart\nEnter 4 to exit"<< endl;
+            cout << "Enter your choice: ";
+            cin >> choice;
 
+            switch (choice)
+            {
+                case 0:
+                    main();
+                    ValidChoice = true;
+                    break;
+                case 1:
+                    main_1();
+                    ValidChoice = true;
+                    break;
+                case 4:
+                    cout << "Ending Program goodbye";
+                    ValidChoice = true;
+                    break;
+                default:
+                    cout << "Invalid Choice. Please choose a number from the options" << endl;
+                    ValidChoice = false;
+                    break;
+            }
+        } while (!ValidChoice);
     }
     return 0;
 }
