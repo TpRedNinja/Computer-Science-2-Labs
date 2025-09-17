@@ -32,13 +32,23 @@ int main_1()
     {
         string password = GenPass();
         cout << "Generated password: " << password << endl;
-        cout << "Is this password good? (yes/no): ";
-        cin >> answer;
-        for (int i = 0; i < answer.length(); i++)
+        do
         {
+            cout << "Is this password good? (yes/no): ";
+            cin >> answer;
 
-            answer[i] = tolower(answer[i]); // NOLINT
-        }
+            //lower case user input so its easier to verify
+            for (int i = 0; i < answer.length(); i++)
+            {
+                answer[i] = tolower(answer[i]); // NOLINT
+            }
+
+            // if user does not put in yes or no display this
+            if (answer != "yes" && answer != "no")
+            {
+                cout << "Error: please input 'yes' or 'no'." << endl;
+            }
+        } while (answer != "yes" && answer != "no");
 
     } while(answer == "no");
     if (answer == "yes")

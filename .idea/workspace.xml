@@ -5,6 +5,8 @@
   </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
   </component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
@@ -15,7 +17,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509aa5a9-6618-4d17-9b76-3533fccf54fa" name="Changes" comment="" />
+    <list default="true" id="509aa5a9-6618-4d17-9b76-3533fccf54fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Class example/FunctionOverloading/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class example/FunctionOverloading/.idea/FunctionOverloading.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class example/FunctionOverloading/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class example/FunctionOverloading/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class example/FunctionOverloading/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Labs/Lab 3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/Project 1/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/Project 1/Random_Password_Generator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/Project 1/Random_Password_Generator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/Project 1/Rock_Paper_Scissors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/Project 1/Rock_Paper_Scissors.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +116,7 @@
       <workItem from="1757961972563" duration="1082000" />
       <workItem from="1757966577336" duration="958000" />
       <workItem from="1757967569814" duration="144000" />
+      <workItem from="1758127390846" duration="664000" />
     </task>
     <servers />
   </component>
