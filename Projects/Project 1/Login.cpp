@@ -149,12 +149,12 @@ void MenuPrompt()
             case 1:
                 attempts = 3;
                 ValidChoice = true;
+                ValidLogin = false;
                 main_2();
                 break;
             case 4:
                 cout << "Ending Program goodbye";
                 ValidChoice = true;
-                ValidLogin = false;
                 break;
             default:
                 cout << "Invalid Choice. Please choose a number from the options" << endl;

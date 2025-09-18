@@ -37,7 +37,7 @@ int main_1()
             cout << "Is this password good? (yes/no): ";
             cin >> answer;
 
-            //lower case user input so its easier to verify
+            //lower case user input so it's easier to verify
             for (int i = 0; i < answer.length(); i++)
             {
                 answer[i] = tolower(answer[i]); // NOLINT
