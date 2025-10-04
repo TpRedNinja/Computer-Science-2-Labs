@@ -18,7 +18,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="509aa5a9-6618-4d17-9b76-3533fccf54fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Class example/Range base for loop/.idea/Range base for loop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Class example/Range base for loop/.idea/Range base for loop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/Project 2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/Project 2/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +38,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="32kJ55eYv2u6gsNfPgHtyrffyiS" />
+  <component name="ProjectStatusUIService">{
+  &quot;uiKindId&quot;: &quot;Widget&quot;
+}</component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -109,6 +115,10 @@
       <workItem from="1757967569814" duration="144000" />
       <workItem from="1758127390846" duration="716000" />
       <workItem from="1758559037597" duration="613000" />
+      <workItem from="1758578326776" duration="164000" />
+      <workItem from="1758733105264" duration="34000" />
+      <workItem from="1759163930184" duration="240000" />
+      <workItem from="1759165400979" duration="189000" />
     </task>
     <servers />
   </component>

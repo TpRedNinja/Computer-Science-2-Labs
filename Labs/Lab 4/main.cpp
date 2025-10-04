@@ -14,7 +14,7 @@ int main()
 
     cout << "This program will encyrpt your message using ceasar code and write it to a file" << endl;
     cout << "Please enter your message: ";
-    cin >> message;
+    getline(cin, message);
 
     //input validation
     do
@@ -30,6 +30,7 @@ int main()
     } while (shift < 1 || shift > 25);
 
     // encrypting the message
+    cout << message << endl;
     encrypted_message = Encrypt_Message(message, shift);
     cout << "Your message encypted is: " << encrypted_message << endl;
 
@@ -45,7 +46,10 @@ string Encrypt_Message(string message, int key)
     string encrypted_message;
     for (int i = 0; i < message.length(); i++)
     {
-        if (isupper(message[i]))
+        if (message[i] == ' ')
+        {
+            encrypted_message += ' ';
+        } else if (isupper(message[i]))
         {
             encrypted_message += char(int(message[i]+ key - 65) % 26 + 65);
         } else
