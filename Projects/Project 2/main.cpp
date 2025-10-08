@@ -23,6 +23,9 @@ int main()
     int start; // an int for user input to start
     int choice; // an int for user input to make a decision 1
     int choice2; // an int for user input to make a decision 2
+    bool debug = false; // bool for to debug or not. Enter 3 for it to be true and to see the answer to the game
+    string CorrectCode; // converts the master code to colors
+    string GuessCode; // converts the users guess to colors
 
     // random thing
     srand(time(0)); // so the numbers are always random no matter what
@@ -36,18 +39,23 @@ int main()
             cout << "Enter 1 to start or 2 to stop: ";
             cin >> start;
             // input validation
-            if (start != 1 && start != 2)
+            if (start != 1 && start != 2 && start != 3)
             {
                 cout << "Error: Please enter 1 to start or 2 to stop" << endl;
             }
-        } while (start != 1 && start != 2);
+        } while (start != 1 && start != 2 && start != 3);
 
         if (start == 2)
         {
             run = false;
 
-        } else
+        }
+        else
         {
+            if (start == 3)
+            {
+               debug = true;
+            }
             // generates the code
             GenerateCode(code, size);
             // continue until round is greater than 10
@@ -78,13 +86,8 @@ int main()
                 cout << Hint << endl;
                 if (Hint == "You win")
                 {
-                    break;
-                } else
-                {
-                    round ++;
-                    // debugging purposes
-                    string CorrectCode;
-                    string GuessCode;
+                    string CorrectCode = "";
+                    string GuessCode = "";
                     for (int i = 0; i < size; i++)
                     {
                         CorrectCode += colors[code[i]] + ",";
@@ -93,16 +96,38 @@ int main()
 
                     cout << "User Guess: " << GuessCode << endl;
                     cout << "Correct Guess: " << CorrectCode << endl;
+                    break;
+                } else
+                {
+                    round ++;
+                    // debugging purposes
+                    string CorrectCode = "";
+                    string GuessCode = "";
+                    for (int i = 0; i < size; i++)
+                    {
+                        CorrectCode += colors[code[i]] + ",";
+                        GuessCode += colors[guess[i]] + ",";
+                    }
+
+                    cout << "User Guess: " << GuessCode << endl;
+                    if (debug)
+                    {
+                        cout << "Correct Guess: " << CorrectCode << endl;
+                    }
                 }
             }
             if (round > 10 && run == true && Hint != "You Win")
             {
                 cout << "You ran out of guesses you lose" << endl;
-                string CorrectCode;
+                string CorrectCode = "";
+                string GuessCode = "";
                 for (int i = 0; i < size; i++)
                 {
                     CorrectCode += colors[code[i]] + ",";
+                    GuessCode += colors[guess[i]] + ",";
                 }
+
+                cout << "User Guess: " << GuessCode << endl;
                 cout << "The correct code was: " << CorrectCode << endl;
             }
 
@@ -111,6 +136,7 @@ int main()
             cin >> choice2;
             if (choice2 == 1)
             {
+                debug = false;
                 main();
             } else if (choice2 == 2)
             {
@@ -143,7 +169,7 @@ string CheckGuess(int code[], int guess[], int size)
     string hint; // the hint that we return
     int CorrectPosAnColor = 0; // a counter so we know how many black pegs to add to hint. Pos means position
     int CorrectColor = 0; // Only increments if the Color is right and the position is wrong basically for white pegs.
-    bool usedCode[4] = {false, false, false, false}; // An array that's parrel with the code array that are bools to tell if I marked it as used or not as in has it been assign a peg yet
+    bool usedCode[4] = {false, false, false, false}; // An array that's parallel with the code array that are bools to tell if I marked it as used or not as in has it been assign a peg yet
     bool usedGuess[4] = {false, false, false, false}; // An array that's parrel with the guess array that are bools to tell if I marked it as used or not as in has it been assign a peg yet
 
     // for black pegs ie if the color is in the right position, and it's the right color
@@ -197,3 +223,4 @@ string CheckGuess(int code[], int guess[], int size)
     }
     return hint;
 }
+
