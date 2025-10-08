@@ -134,7 +134,7 @@ void MenuPrompT()
                 ValidChoice = true;
                 break;
             case 1:
-                round = 0;
+                round = 1;
                 ValidChoice = true;
                 main_3();
                 break;

@@ -64,6 +64,15 @@ int main()
                 int i = 0;
                 cout << "Round " << round << endl;
                 cout << "Enter\n0 for White\n1 for Pink\n2 for Orange\n3 for Yellow\n4 for Green\n5 for Purple"<< endl;
+                if (debug)
+                {
+                    string CorrectCode = "";
+                    for (int i = 0; i < size; i++)
+                    {
+                        CorrectCode += colors[code[i]] + ",";
+                    }
+                    cout << "Correct Guess: " << CorrectCode << endl;
+                }
                 do
                 {
                     // get user input
@@ -136,13 +145,11 @@ int main()
             cin >> choice2;
             if (choice2 == 1)
             {
-                debug = false;
                 main();
             } else if (choice2 == 2)
             {
                 run = false;
-
-            } else
+            }else
             {
                 cout << "Error: Please enter a valid number" << endl;
             }
