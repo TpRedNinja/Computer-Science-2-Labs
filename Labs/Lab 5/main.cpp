@@ -15,14 +15,14 @@ int main()
     int shift; // how many characters to shift the message by
     string encrypted_message; // original message encrypted by ceaser code
 
-    cout << "This program will encyrpt your message using ceasar code and write it to a file" << endl;
+    cout << "This program will encrypt your message using Caesar code and write it to a file" << endl;
     cout << "Please enter your message: ";
     getline(cin, message);
 
     //input validation
     do
     {
-        cout << "Please enter the amount you want the message to be encyrpted by(Choose between 1 and 25): ";
+        cout << "Please enter the amount you want the message to be encrypted by(Choose between 1 and 25): ";
         cin >> shift;
 
         if (shift < 1 || shift > 25)
@@ -35,11 +35,11 @@ int main()
     // encrypting the message
     cout << message << endl;
     encrypted_message = Encrypt_Message(message, shift);
-    cout << "Your message encypted is: " << encrypted_message << endl;
+    cout << "Your message encrypted is: " << encrypted_message << endl;
 
     // writing the message to the file
     Write_Message(encrypted_message);
-    cout << "Message written to secret_message.txt successfully";
+    cout << "Message written to secret_message.txt successfully" << endl;
 
     // reading the message from the file
     string encryptedMessage = Read_Message();
@@ -108,10 +108,10 @@ string Decrypt_Message(string encrypyted_message, int key)
             decrypted_message += ' ';
         } else if (isupper(encrypyted_message[i]))
         {
-            decrypted_message += char(int(encrypyted_message[i]- key - 65) % 26 + 65);
+            decrypted_message += char(int(encrypyted_message[i]- key - 65 + 26) % 26 + 65);
         } else
         {
-            decrypted_message += char(int(encrypyted_message[i]- key - 97) % 26 + 97);
+            decrypted_message += char(int(encrypyted_message[i]- key - 97 + 26) % 26 + 97);
         }
     }
     return decrypted_message;
