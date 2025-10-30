@@ -8,12 +8,15 @@ using namespace std;
 
 const int SIZE = 500;
 bool noWordsAvailable = false;
+bool optionIsNull = false;
 
 void readFile(string sentence[]);
 string findLastWord(string userSentence);
 vector<string> FindWordInFile(string word, string sentence[]);
 vector<string> FindNextWord(string word, vector<string> validSentences);
 void display(vector<string> wordsToDisplay, string userSentence);
+void writeNewSentenceToFile(string newSentence);
+bool inarray(vector<string> wordsToDisplay, string temp2);
 
 int main()
 {
@@ -27,20 +30,12 @@ int main()
     readFile(sentence);
 
     string word = findLastWord(userSentence);
-    //cout << word << endl;
+    cout << word << endl;
 
     possibleSentences = FindWordInFile(word, sentence);
-    /* debug
-     for (int i = 0; i < possibleSentences.size(); i++)
-    {
-        cout << possibleSentences[i] << endl;
-    }
-    */
-
+    cout << "------------------------" << endl;
     wordsToDisplay = FindNextWord(word, possibleSentences);
     display(wordsToDisplay, userSentence);
-
-
 
     return 0;
 }
@@ -89,19 +84,42 @@ vector<string> FindWordInFile(string word, string sentence[])
 
 vector<string> FindNextWord(string word, vector<string> validSentences)
 {
-    int i = 0;
     vector<string> wordsToDisplay;
     string temp;
-    while (validSentences[i] != "")
+    string temp2;
+    for (int i = 0; i < validSentences.size(); i++)
     {
-        temp = validSentences[i].substr(validSentences[i].find(word));
-        string temp2 = temp.substr(0,temp.find(" "));
-        // do something to find the next word after the word and add it to the vector
-        wordsToDisplay.push_back(temp2);
-        i++;
+        temp = validSentences[i].substr(validSentences[i].find(word) + word.length());
+        cout << temp << endl;
+        temp2 = temp.substr(0,temp.find(' '));
+        cout << temp2 << endl;
+        if (!inarray(wordsToDisplay, temp2))
+        {
+            wordsToDisplay.push_back(temp2);
+        }
     }
 
     return wordsToDisplay;
+}
+
+bool inarray(vector<string> wordsToDisplay, string temp2)
+{
+    if (wordsToDisplay.size() > 0)
+    {
+        for (int i = 0; i < wordsToDisplay.size(); i++)
+        {
+            if (wordsToDisplay[i] != temp2)
+            {
+                return false;
+            } else
+            {
+                return true;
+            }
+        }
+    }
+
+    return false;
+
 }
 
 void display(vector<string> wordsToDisplay, string userSentence)
@@ -112,6 +130,7 @@ void display(vector<string> wordsToDisplay, string userSentence)
     vector<string> chosenWords = {};
     string option1, option2, option3, newSentence;
     int choice;
+    string newWord;
 
     random_device rd;
     mt19937 gen(rd());
@@ -137,16 +156,24 @@ void display(vector<string> wordsToDisplay, string userSentence)
     }
     else if (size < 3 && size > 0)
     {
+        optionIsNull = true;
         if (size == 1)
         {
             option1 = wordsToDisplay[0];
-            option2 = "NULL";
-            option3 = "NULL";
+            option2 = "NULL please do not choose";
+            option3 = "NULL please do not choose";
+            cout << option1 << endl;
+            cout << option2 << endl;
+            cout << option3 << endl;
+
         } else if (size == 2)
         {
             option1 = wordsToDisplay[0];
             option2 = wordsToDisplay[1];
-            option3 = "NULL";
+            option3 = "NULL please do not choose";
+            cout << option1 << endl;
+            cout << option2 << endl;
+            cout << option3 << endl;
         }
 
     } else if (size > 3)
@@ -160,27 +187,97 @@ void display(vector<string> wordsToDisplay, string userSentence)
         cout << option3 << endl;
     }
 
-    while (choice > 3 || choice < 1)
+    do
     {
-        cout << "Enter 1 for the first word 2 for the second and 3 for the third word";
-        cin >> choice;
-        if (choice > 3 || choice < 1)
+        if (noWordsAvailable)
         {
-            cout << "Please enter a valid choice";
+            cout << "Error: No possible words to recommend\nPlease complete the sentence" << endl;
+            cin >> newSentence;
+        } else
+        {
+            cout << "Enter 1 for the first word\n2 for the second\n3 for the third word\n4 if you want to put in your own word";
+            cin >> choice;
+            cout << choice << endl;
+            if (choice > 4 || choice < 1)
+            {
+                cout << "Please enter a valid choice" << endl;
+            }
+            cout << "At line 194" << endl;
+            if (!optionIsNull)
+            {
+                switch (choice)
+                {
+                    case 1:
+                        newSentence = userSentence + " " + option1;
+                        break;
+                    case 2:
+                        newSentence = userSentence + " " + option2;
+                        break;
+                    case 3:
+                        newSentence = userSentence + " " + option3;
+                        break;
+                    case 4:
+                        cin >> newWord;
+                        newSentence = userSentence + " " + newWord;
+                        break;
+                }
+            } else
+            {
+                if (option3 == "NULL please do not choose")
+                {
+                    switch (choice)
+                    {
+                        case 1:
+                            newSentence = userSentence + " " + option1;
+                            break;
+                        case 2:
+                            newSentence = userSentence + " " + option2;
+                            break;
+                        case 3:
+                            cout << "Error can not choose null choose another option";
+                            display(wordsToDisplay, userSentence);
+                            break;
+                        case 4:
+                            cin >> newWord;
+                            newSentence = userSentence + " " + newWord;
+                            break;
+                    }
+                } else if (option2 == "NULL please do not choose" && option3 == "NULL please do not choose")
+                {
+                    switch (choice)
+                    {
+                        case 1:
+                            newSentence = userSentence + " " + option1;
+                            break;
+                        case 2:
+                            cout << "Error can not choose null choose another option";
+                            display(wordsToDisplay, userSentence);
+                            break;
+                        case 3:
+                            cout << "Error can not choose null choose another option";
+                            display(wordsToDisplay, userSentence);
+                            break;
+                        case 4:
+                            cin >> newWord;
+                            newSentence = userSentence + " " + newWord;
+                            break;
+                    }
+                }
+            }
         }
-    }
+        cout << "At line 207" << endl;
+    } while ((choice > 4 || choice < 1) && !noWordsAvailable);
 
-    switch (choice)
+    while (!noWordsAvailable)
     {
-        case 1:
-            newSentence = userSentence + " " + option1;
-        case 2:
-            newSentence = userSentence + " " + option2;
-        case 3:
-            newSentence = userSentence + " " + option3;
-        default:
-            newSentence = userSentence + " " + option1;
+        cout <<  "Your new sentence is: " << newSentence << endl;
+        cout << "Adding: " << newSentence << "to file" << endl;
+        writeNewSentenceToFile(newSentence);
     }
+}
 
-    cout <<  "Your new sentence is: " << newSentence << endl;
+void writeNewSentenceToFile(string newSentence)
+{
+    ofstream outfile("my_story.txt", ios::app);
+    outfile << newSentence << "\n";
 }
