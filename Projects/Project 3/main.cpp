@@ -24,6 +24,7 @@ int main()
     string sentence [SIZE] = {};
     vector<string> possibleSentences = {};
     vector<string> wordsToDisplay = {};
+    int choice_main = 0;
 
     cout << "Please enter a non complete sentence: ";
     getline(cin, userSentence);
@@ -36,6 +37,29 @@ int main()
     cout << "------------------------" << endl;
     wordsToDisplay = FindNextWord(word, possibleSentences);
     display(wordsToDisplay, userSentence);
+
+    do
+    {
+        cout << "would you like to run this again or exit?" << endl;
+        cout << "Enter 1 to restart and 2 to exit: ";
+        cin >> choice_main;
+
+        if (choice_main < 1 || choice_main > 2)
+        {
+            cout << "Error, enter a valid option!" << endl;
+        }
+
+        switch (choice_main)
+        {
+            case 1:
+                cout << "Restarting..." << endl;
+                main();
+            case 2:
+                cout << "Exiting..." << endl;
+                break;
+        }
+    }
+    while(choice_main < 1 || choice_main > 2);
 
     return 0;
 }
@@ -234,7 +258,7 @@ void display(vector<string> wordsToDisplay, string userSentence)
                             newSentence = userSentence + " " + option2;
                             break;
                         case 3:
-                            cout << "Error can not choose null choose another option";
+                            cout << "Error can not choose null choose another option" << endl;
                             display(wordsToDisplay, userSentence);
                             break;
                         case 4:
@@ -250,11 +274,11 @@ void display(vector<string> wordsToDisplay, string userSentence)
                             newSentence = userSentence + " " + option1;
                             break;
                         case 2:
-                            cout << "Error can not choose null choose another option";
+                            cout << "Error can not choose null choose another option" << endl;
                             display(wordsToDisplay, userSentence);
                             break;
                         case 3:
-                            cout << "Error can not choose null choose another option";
+                            cout << "Error can not choose null choose another option" << endl;
                             display(wordsToDisplay, userSentence);
                             break;
                         case 4:
@@ -268,12 +292,9 @@ void display(vector<string> wordsToDisplay, string userSentence)
         cout << "At line 207" << endl;
     } while ((choice > 4 || choice < 1) && !noWordsAvailable);
 
-    while (!noWordsAvailable)
-    {
-        cout <<  "Your new sentence is: " << newSentence << endl;
-        cout << "Adding: " << newSentence << "to file" << endl;
-        writeNewSentenceToFile(newSentence);
-    }
+    cout <<  "Your new sentence is: " << newSentence << endl;
+    cout << "Adding: " << newSentence << " to file" << endl;
+    writeNewSentenceToFile(newSentence);
 }
 
 void writeNewSentenceToFile(string newSentence)
