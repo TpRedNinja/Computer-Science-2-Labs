@@ -1,0 +1,14 @@
+//
+// Created by jjdom on 11/10/2025.
+//
+
+#ifndef INHERITENCE_EXAMPLE_FILLEDDOUGHNUT_H
+#define INHERITENCE_EXAMPLE_FILLEDDOUGHNUT_H
+
+
+class FilledDoughnut
+{
+};
+
+
+#endif //INHERITENCE_EXAMPLE_FILLEDDOUGHNUT_H
