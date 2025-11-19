@@ -1,0 +1,3 @@
+C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/Stack and ques example/cmake-build-debug/CMakeFiles/Stack_and_ques_example.dir
+C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/Stack and ques example/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/Stack and ques example/cmake-build-debug/CMakeFiles/rebuild_cache.dir
