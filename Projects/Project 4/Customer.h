@@ -27,14 +27,14 @@ class Customer
         string get_name();
         string get_address();
         string get_date_check_out();
-        Book get_book();
+        Book* get_book();
 
         // setter functions
         void set_id(int id);
         void set_name(string name);
         void set_address(string address);
         void set_date_check_out(string date_check_out);
-        void set_book(Book book);
+        void set_book(Book* book);
 
 
     private:
@@ -43,7 +43,7 @@ class Customer
         string m_name;
         string m_address;
         string m_date_check_out;
-        Book m_book;
+        Book* m_book;
 
         // function to get the users system date
         string getSystemDate();

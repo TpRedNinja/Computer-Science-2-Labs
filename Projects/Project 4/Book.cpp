@@ -56,8 +56,6 @@ void Book::Checkout() {
         m_IsCheckOut = true;
         cout << "Book " << m_title << " is now checkout" << endl;
     }
-
-
 }
 // checkin function
 void Book::Checkin() {

@@ -7,7 +7,7 @@
 #include <sstream>
 using namespace std;
 // default constructor no args
-Customer::Customer() : m_book() {
+Customer::Customer() : m_book(nullptr) {
     m_id = 10000 + rand() % 90000;
     string defaultNames [] = {"John Doe", "Jane Doe"}; // default names
     m_name = defaultNames[rand() % 2]; // randomly pick between the 2 names
@@ -15,7 +15,7 @@ Customer::Customer() : m_book() {
     m_date_check_out = "00/00/0000";
 }
 // constructor with args
-Customer::Customer(string name, string address) : m_book() {
+Customer::Customer(string name, string address) : m_book(nullptr) {
     m_id = 10000 + rand() % 90000;
     m_name = name;
     m_address = address;
@@ -38,8 +38,10 @@ Customer::~Customer() {
 void Customer::View() {
     cout << "Customer id: " << m_id << "\nCustomer name: " << m_name << "\nCustomer address: " <<
         m_address << "\nCustomer book checkout on: " << m_date_check_out <<
-            "\nCustomer current book: ";
-    m_book.View();
+            "\nCustomer current book: " << endl;
+    if (m_book)
+        m_book->View();
+
 }
 // get the users system date
 string Customer::getSystemDate() {
@@ -61,20 +63,21 @@ void Customer::Checkout(Book &bookToCheckout) {
         return;
     }
 
-    m_book = bookToCheckout; // assign the book to the customer
     bookToCheckout.Checkout(); // mark the book as checked out
+    m_book = &bookToCheckout; // assign the book to the customer
     m_date_check_out = getSystemDate(); // set the date it was check out
 
-    cout << "Customer " << m_name << " checkout " << m_book.get_title() <<
-        "it was checkout on" << m_date_check_out << endl;
+    cout << "Customer " << m_name << " checkout " << m_book->get_title() <<
+        " it was checkout on " << m_date_check_out << endl;
 }
 
 void Customer::Checkin() {
-    if (!m_book.get_ischeckout() && m_date_check_out == "00/00/0000")
+    if (!m_book || (!m_book->get_ischeckout() && (m_date_check_out == "00/00/0000" || m_date_check_out == "")))  {
         cerr << "Error: Customer has no book checked out." << endl;
-
-    m_book.Checkin();
-    m_book = Book();
+        return;
+    }
+    m_book->Checkin();
+    m_book = nullptr;
     m_date_check_out = "";
 
     cout << "Customer " << m_name << " has checked in their book." << endl;
@@ -94,7 +97,7 @@ string Customer::get_address() {
 string Customer::get_date_check_out() {
     return m_date_check_out;
 }
-Book Customer::get_book() {
+Book* Customer::get_book() {
     return m_book;
 }
 
@@ -111,6 +114,6 @@ void Customer::set_address(string address) {
 void Customer::set_date_check_out(string date_check_out) {
     m_date_check_out = date_check_out;
 }
-void Customer::set_book(Book book) {
+void Customer::set_book(Book* book) {
     m_book = book;
 }
