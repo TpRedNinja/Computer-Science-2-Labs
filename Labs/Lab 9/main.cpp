@@ -2,7 +2,11 @@
 #include <string>
 #include <vector>
 #include "LegoSets.h"
+#include <iomanip>
+#include <iostream>
 using namespace std;
+
+int SizeOfVector;
 
 //COMPLETE THIS FUNCTION
 void fillVector(vector<LegoSets> &legoList){
@@ -12,7 +16,7 @@ void fillVector(vector<LegoSets> &legoList){
     int quantity;
 
      // ask for amount of lego sets items
-    cout << "How many Lego Sets do you have?: ";
+    cout << "How many Lego Sets do you want?: ";
     cin >> amount;
     if (cin.peek() == '\n')
         cin.ignore();
@@ -20,6 +24,18 @@ void fillVector(vector<LegoSets> &legoList){
     for (int i = 0; i < amount; i++){
         // ask for name, price, quantity of each item and
         // add completed lego set item to vector
+        cout << "What is the name of the lego set?: ";
+        if (cin.peek() == '\n')
+            cin.ignore();
+        getline(cin, name);
+        cout << "What is the price of the lego set?:";
+        cin >> price;
+        cout << "How many lego piece will be in the lego set?: ";
+        cin >> quantity;
+
+        legoList.push_back(LegoSets(name, price, quantity));
+        SizeOfVector++;
+
         }
 }
 
@@ -30,6 +46,13 @@ void printVector(vector<LegoSets> &legoList){
     // print each item's name, price, and quantity with correct
   // precision for price
   // USE ITERATOR
+    for (int i = 0; i  < SizeOfVector; ++i )
+    {
+        cout << "Name of lego set " << i+1 << ": " << legoList[i].getTitle() << endl;
+        cout << setprecision(2) << fixed << setprecision(2);
+        cout << "Price of the lego set " << i+1 << ": $" << legoList[i].getPrice() << endl;
+        cout << "Amount of lego piece in set: " << i+1 << ": " << legoList[i].getAmount() << endl;
+    }
 
 
 }
