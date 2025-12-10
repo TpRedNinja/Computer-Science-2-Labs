@@ -34,7 +34,6 @@ void PizzaOrders::AddNew(int customer_ID, string toppings, string size, bool deb
         
         while (current->nextOrder != NULL){
             current = current -> nextOrder;
-            
         }
         
         current -> nextOrder = newOrder;
@@ -108,9 +107,15 @@ void PizzaOrders::completeOrder(int customer_ID){
     }
     while(current != NULL){
         if(current->cust_ID == customer_ID){
-            current->complete = true;
-            cout <<"Your order is ready to be picked up!" << endl;
-            return;
+            if (current-> complete == false)
+            {
+                current->complete = true;
+                cout <<"Your order is ready to be picked up!" << endl;
+                return;
+            } else
+            {
+                cerr << "ERROR: Pizza is already complete!" << endl;
+            }
         }
         current = current -> nextOrder;   
     }
@@ -128,7 +133,8 @@ void PizzaOrders::displayIncomplete(){
         if(current->complete == false){
             cout << "Order ID: " << current->cust_ID << endl;
             cout << "Toppings: " << current->topping << endl;
-            cout << "Size: " << current->sizes << endl; 
+            cout << "Size: " << current->sizes << endl;
+            cout << "--------------------------------------" << endl;
         }
         current = current -> nextOrder;
     }

@@ -3,14 +3,14 @@
 #include <string>
 using namespace std;
 
-struct Pizza{
+struct D_Pizza{
     int cust_ID;// customer ID
     string topping;
     string sizes;
     bool complete;
-    Pizza* prevOrder;
-    Pizza *nextOrder;
-    Pizza(int CID, string T, string S, bool C) : cust_ID(CID), topping(T), sizes(S), complete(C), nextOrder(nullptr),
+    D_Pizza* prevOrder;
+    D_Pizza *nextOrder;
+    D_Pizza(int CID, string T, string S, bool C) : cust_ID(CID), topping(T), sizes(S), complete(C), nextOrder(nullptr),
     prevOrder(nullptr){}
 };
 
@@ -31,7 +31,7 @@ class D_PizzaOrders
         void D_searchforpizza(int customer_ID); // searches for a specfic order
         void D_displayIncomplete(); // displays only non completed orders
     private:
-        Pizza* header;
+        D_Pizza* header;
         int CID; // customer id
         string T; // pizza toppings
         string S; // pizza sizes
