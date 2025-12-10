@@ -6,8 +6,10 @@ using namespace std;
 void sortArray(int startPoint, int to_sort[], int size);
 void printArray(int to_sort[], int size);
 void resetArray(int to_sort[], int copy_to_sort[], int size);
-bool debug = false;
-bool run = true;
+bool debug = false; // to enable to disable some debug statements
+bool run = true; // to determine if the program is running or not
+bool yeet = false; // just to disable some debug statements
+int timesCalled = 0;
 
 int main()
 {
@@ -56,6 +58,8 @@ int main()
 
         cout << "sorted array: ";
         printArray(to_sort, size);
+        if (debug)
+            cout << "total times: " << timesCalled << endl;
         do
         {
             cout << "would you like to run this again? 1 for yes 2 for no: ";
@@ -68,6 +72,7 @@ int main()
         {
             case 1:
                 resetArray(to_sort, copy_to_sort, size);
+                timesCalled = 0;
                 break;
             case 2:
                 run = false;
@@ -82,50 +87,79 @@ void sortArray(int startPoint, int to_sort[], int size)
 {
     bool lowest = false;
     bool highest = false;
-    int current;
+    int maxIndex, minIndex ;
 
-    if (startPoint == 1) // start with the lowest number and go up
-    {
+    if (startPoint == 1) { // start with the lowest number and go up
         lowest = true;
-        current = 2;
-    } else if (startPoint == 2) // start with the highest number and go down
-    {
+    } else if (startPoint == 2) { // start with the highest number and go down
         highest = true;
-        current = 5;
     }
 
     if (lowest)
     {
-        swap(to_sort[current], to_sort[0]); // swap index 2 and 0
-        cout << to_sort[0] << ", " << to_sort[current] << endl;
-    } else if (highest)
-    {
-        swap(to_sort[current], to_sort[size - 1]); // swap index 5 and 9
-        cout << to_sort[9] << ", " << to_sort[current] << endl;
-        printArray(to_sort, size);
-        for (int i = size - 2; i >= 0; i--)
-        { // i is the index
-            cout << i << endl;
-            for (int j = i - 1; j < size && j > 0; j--)
-            { // j is the index - 1
-                if (to_sort[j] > to_sort[i])
-                {
-                    cout << to_sort[i] << ", " << to_sort[j] << endl;
-                    swap(to_sort[i], to_sort[j]);
-                    printArray(to_sort, size);
-                } else if (to_sort[j] < to_sort[i])
-                {
-                    cout << "j is greater than i" << endl;
+        minIndex = 0;
+        for (int i = 0; i < size; i++)
+        {
+            if (to_sort[i] < to_sort[minIndex])
+                minIndex = i;
+        }
+        swap(to_sort[minIndex], to_sort[0]); // swap index 2 and 0
+        if (debug && yeet)
+            cout << to_sort[0] << ", " << to_sort[minIndex] << endl;
+        if (debug)
+            printArray(to_sort, size);
+        for (int i = 1; i < size; i++)
+        {
+            if (debug && yeet)
+                cout << i << endl;
+            for (int j = i + 1; j < 10; j++)
+            {
+                if (to_sort[j] < to_sort[i]) {
+                    if (debug && yeet)
+                        cout << to_sort[i] << ", " << to_sort[j] << endl;
+                    swap(to_sort[j], to_sort[i]);
+                    if (debug)
+                        printArray(to_sort, size);
+                } else if (to_sort[j] > to_sort[i]) {
+                    if (debug && yeet)
+                        cout << "j is less than i" << endl;
                     continue;
                 }
-
             }
-
+        }
+    } else if (highest)
+    {
+        maxIndex = 0;
+        for (int i = 0; i < size; i++)
+        {
+            if (to_sort[i] > to_sort[maxIndex])
+                maxIndex = i;
+        }
+        swap(to_sort[maxIndex], to_sort[size - 1]); // swap index 5 and 9
+        if (debug && yeet)
+            cout << to_sort[9] << ", " << to_sort[maxIndex] << endl;
+        if (debug)
+            printArray(to_sort, size);
+        for (int i = size - 2; i >= 0; i--)
+        { // i is the index
+            if (debug && yeet)
+                cout << i << endl;
+            for (int j = i - 1; j >= 0; j--)
+            { // j is the index - 1
+                if (to_sort[j] > to_sort[i]) {
+                    if (debug && yeet)
+                        cout << to_sort[i] << ", " << to_sort[j] << endl;
+                    swap(to_sort[j], to_sort[i]);
+                    if (debug)
+                        printArray(to_sort, size);
+                } else if (to_sort[j] < to_sort[i]) {
+                    if (debug && yeet)
+                        cout << "j is greater than i" << endl;
+                    continue;
+                }
+            }
         }
     }
-
-
-
 }
 
 void printArray(int to_sort[], int size)
@@ -139,6 +173,8 @@ void printArray(int to_sort[], int size)
         else
             cout << to_sort[i] << ", ";
     }
+    cout << "------------------------------------------------" << endl;
+    timesCalled++;
 }
 
 void resetArray(int to_sort[], int copy_to_sort[], int size)
