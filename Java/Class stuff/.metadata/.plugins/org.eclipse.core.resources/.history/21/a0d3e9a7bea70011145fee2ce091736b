@@ -1,9 +1,0 @@
-
-public class Vop {
-	public static void main(String[] args) {
-		int num1 = 500;
-		double num2 = 3.56;
-		
-		
-	}
-}
