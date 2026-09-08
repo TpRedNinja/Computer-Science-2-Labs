@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="774982ff-7ad9-482a-b82a-4ae6cceb6a5f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Final Exam/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final Exam/.idea/Final Exam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final Exam/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final Exam/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final Exam/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final Exam/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final Exam/Food.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final Exam/Food.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/.idea/Porject 5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/Books.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/Books.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/Customer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Porject 5/Customer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/Inheritence example/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/Inheritence example/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/Inheritence example/Doughnut.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/Inheritence example/Doughnut.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/Inheritence example/FilledDoughnut.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/Inheritence example/FilledDoughnut.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/Inheritence example/FilledDoughnut.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/Inheritence example/FilledDoughnut.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/Inheritence example/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/Inheritence example/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/Linked list example/.idea/Linked list example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/Linked list example/.idea/Linked list example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/Linked list example/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/Linked list example/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/Stack and ques example/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/Stack and ques example/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class example/size of ptr example/.idea/size of ptr example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Class example/size of ptr example/.idea/size of ptr example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Group Project/D_PizzaOrders.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Group Project/D_PizzaOrders.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Group Project/D_PizzaOrders.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Group Project/D_PizzaOrders.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab 10/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Labs/Lab 10/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab 7/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab 7/.idea/Lab 7.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab 7/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Labs/Lab 7/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab 7/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab 7/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab 7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Labs/Lab 7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/Lab 8/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Labs/Lab 8/.idea/editor.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="341usWO8ncHn0sUHVE4jMKtHyvS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jjdom/Desktop/Computer Science 2 Labs/Projects&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="774982ff-7ad9-482a-b82a-4ae6cceb6a5f" name="Changes" comment="" />
+      <created>1760393606201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760393606201</updated>
+      <workItem from="1760393607786" duration="17000" />
+      <workItem from="1765992848124" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

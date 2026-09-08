@@ -23,7 +23,6 @@ class D_PizzaOrders
 
         void D_AddNew(int customer_ID, string toppings, string size, bool debug); // add a new order to the list
 
-        bool D_isCompleted(); // to determine if a order has been completed or not
         void D_removeOrder(int customer_ID); // removes a order
 
         void D_completeOrder(int customer_ID); // completes a non complted order

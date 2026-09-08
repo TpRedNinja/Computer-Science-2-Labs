@@ -21,7 +21,6 @@ D_PizzaOrders::~D_PizzaOrders() {
 void D_PizzaOrders::D_AddNew(int customer_ID, string toppings, string size, bool debug) {
     D_Pizza* current = header;
     D_Pizza* newOrder = new D_Pizza(customer_ID, toppings, size, false);
-    D_Pizza* d_prevOrder = nullptr;
     if(debug == true) {
         cout << "Your order ID is: " << customer_ID << endl;
     }

@@ -20,6 +20,7 @@ class Doughnut
         friend ostream& operator<<(ostream& os, const Doughnut& d);
     private:
         dType m_doughnutType;
+    protected:
         int m_bitesLeft;
 };
 // this goes outside the class completely

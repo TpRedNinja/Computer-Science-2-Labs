@@ -78,6 +78,22 @@ class MyTrain {
                 delete temp;
             }
         }
+
+        void LinkInsert(int search, int value) {
+            if (engine) {
+                Node* newNode = new Node(value);
+
+                Node* current = engine;
+                while (current -> nextCar && current -> data != search) {
+                    current = current -> nextCar;
+                }
+                if (current -> data == search) {
+                    newNode -> nextCar = current -> nextCar;
+                }
+                // add to the end
+                current -> nextCar = newNode;
+            }
+        }
 };
 
 int main() {
@@ -88,7 +104,7 @@ int main() {
     cout << "The train is pulling cars: " << !Bob.isEmpty() << endl;
 
     // add a few cars to the train
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 8; i++) {
         Bob.linkCars(i);
     }
 
@@ -99,7 +115,10 @@ int main() {
     Bob.removeCar(0);
     Bob.station();
 
-    Bob.removeCar(9);
+    Bob.removeCar(6);
+    Bob.station();
+
+    Bob.LinkInsert(3,99);
     Bob.station();
 
     return 0;
