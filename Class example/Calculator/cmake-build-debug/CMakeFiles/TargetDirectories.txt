@@ -1,3 +1,0 @@
-C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/Calculator/cmake-build-debug/CMakeFiles/Calculator.dir
-C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/Calculator/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/jjdom/Desktop/Computer Science 2 Labs/Class example/Calculator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
